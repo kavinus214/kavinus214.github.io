@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kavin U S – Data Scientist Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; color: #222; }
+    header { background-color: #003366; color: white; padding: 2rem 1rem; text-align: center; }
+    section { max-width: 960px; margin: auto; padding: 2rem; background: white; margin-top: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    h2 { color: #003366; }
+    ul { padding-left: 20px; }
+    a { color: #003366; text-decoration: none; }
+    footer { text-align: center; padding: 2rem 1rem; color: #555; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.75rem; border: 1px solid #ccc; text-align: left; }
+    th { background-color: #eaeaea; }
+    .interactive { margin-top: 2rem; }
+    #csvOutput { font-size: 0.9rem; white-space: pre-wrap; background: #f1f1f1; padding: 1rem; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kavin U S</h1>
+    <p>Data Scientist | Python • PySpark • Databricks • SQL</p>
+    <p>📍 Namakkal, India | ✉️ <a href="mailto:kavinshanmugam214@gmail.com">kavinshanmugam214@gmail.com</a> | <a href="https://linkedin.com/in/kavin-us" target="_blank">LinkedIn</a></p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Data Scientist with 1.5 years of hands-on experience at TheMathCompany, working on price optimization, demand forecasting, and ML-driven simulations. Promoted to Data Scientist 1 for delivering high-impact, scalable solutions using Databricks, PySpark, and SQL. Passionate about combining statistical modeling with business strategy to create measurable outcomes.</p>
+  </section>
+
+  <section>
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li><strong>Languages:</strong> Python, SQL, PySpark</li>
+      <li><strong>Cloud & Platforms:</strong> Azure Databricks, Snowflake</li>
+      <li><strong>Libraries & Frameworks:</strong> scikit-learn, statsmodels, XGBoost, Seaborn, Plotly, Streamlit</li>
+      <li><strong>Techniques:</strong> Forecasting, Price Simulation, Fixed Effects Modeling, Feature Engineering, Partial Pooling</li>
+      <li><strong>Tools:</strong> Git, Jupyter, Power BI, Excel, VS Code</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Featured Projects</h2>
+    <h3>1. Price Optimization Simulator</h3>
+    <p>Built a profit and market share simulator for an automotive company using fixed effects models. Integrated competitor sales and payment ranges to recommend optimal pricing strategies by nameplate and business center. Supported executive pricing decisions with interpretable metrics.</p>
+
+    <h3>2. Fashion Brand Forecasting</h3>
+    <p>Developed SKU-level forecasting pipeline using SARIMAX, ARIMA, Holt-Winters, and Croston models. Categorized SKUs by demand pattern and deployed via UCM framework, enhancing demand visibility for planners and reducing stockouts.</p>
+
+    <h3>3. Concrete Strength Prediction</h3>
+    <p>Engineered features like Water-Cement Ratio to predict compressive strength of concrete using regression. Evaluated models with MAE and R2 for performance comparison.</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul>
+      <li>Crash Course on Python – Google</li>
+      <li>Introduction to Data Science – Cisco Networking Academy</li>
+      <li>Excel for Data Analytics – Coursera</li>
+      <li>Full Stack Python Developer – Green Technologies</li>
+    </ul>
+  </section>
+
+  <section class="interactive">
+    <h2>📊 Try It Live: Upload and View Your CSV</h2>
+    <input type="file" id="csvUpload" accept=".csv" />
+    <div id="csvOutput"></div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:kavinshanmugam214@gmail.com">kavinshanmugam214@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/kavin-us" target="_blank">linkedin.com/in/kavin-us</a></p>
+    <p><strong>Location:</strong> Namakkal, India (Open to relocate to UAE)</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kavin U S. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('csvUpload').addEventListener('change', function(evt) {
+      const file = evt.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('csvOutput').textContent = e.target.result;
+      };
+      reader.readAsText(file);
+    });
+  </script>
+</body>
+</html>
